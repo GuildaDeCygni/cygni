@@ -72,7 +72,7 @@ export function ConexoesPage() {
             </div>
             <div className="aspect-video w-full rounded-lg overflow-hidden border border-cream-muted/10 bg-void">
               <iframe
-              src="https://www.youtube.com/embed?v=telNZfxAYgo" 
+              src="https://www.youtube.com/embed/telNZfxAYgo"
                 title="YouTube video player"
                 frameBorder="0"
                 allowFullScreen
