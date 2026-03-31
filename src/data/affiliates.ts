@@ -4,6 +4,7 @@ export interface AffiliateLink {
   description: string;
   platform: 'amazon' | 'magalu' | 'mercadolivre' | 'shopee' | 'other';
   url: string;
+  imageUrl?: string;
   rating: number;
   category: string;
 }

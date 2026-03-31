@@ -21,7 +21,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-3 group">
               <div className="relative w-16 h-16 flex items-center justify-center">
-                <img src="/Simbolo Guida de Cygni Sem fundo.png" alt="Símbolo Cygni" className="w-16 h-16 object-contain" />
+                <img src="/cygni/Ssf.png" alt="Símbolo Cygni" className="w-16 h-16 object-contain" />
               </div>
               <div>
                 <h3 className="font-cinzel text-xl font-bold text-cream group-hover:text-fiery transition-colors">

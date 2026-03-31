@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { SectionTitle } from '@/components/ui-custom/SectionTitle';
-import { BookOpen, Map, Users, Sword, Download, FileText, Flame } from 'lucide-react';
+import { BookOpen, Map, Users, Sword, Download, FileText, Flame, Quote } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 const loreTopics = [
@@ -24,12 +24,47 @@ export function UniversoPage() {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-fiery/5 rounded-full blur-3xl" />
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10">
           <SectionTitle title="Universo Cygni" subtitle="O Cenário de RPG" />
-          <p className="mt-6 text-lg text-cream-muted max-w-3xl mx-auto">
-            Bem-vindo a Cygni, um mundo de alta fantasia onde a magia flui pelas veias da terra.
-          </p>
         </div>
+
+        {/* Bloco de Citação do Sullivan */}
+        <div className="max-w-4xl mx-auto mb-20 relative">
+          <div className="absolute -top-6 -left-6 text-fiery/10">
+            <Quote className="w-24 h-24" />
+          </div>
+          
+          <div className="relative z-10 p-8 md:p-10 rounded-xl bg-charcoal/40 border border-fiery/20 shadow-[0_0_30px_rgba(246,113,1,0.05)]">
+            <h3 className="font-cinzel text-xl font-bold text-fiery mb-6 text-center border-b border-fiery/20 pb-4">
+              Introdução - Bem-vindo a Cygni
+            </h3>
+            
+            <div className="space-y-4 text-cream-muted/90 text-lg leading-relaxed font-serif">
+              <p>
+                Se você está lendo isso, parabéns! Você provavelmente sobreviveu ao nascimento, aprendeu a andar sem cair em um poço e, por algum motivo cósmico, decidiu se aventurar por Cygni — o pedaço mais caótico, contraditório e fascinante do planeta.
+              </p>
+              
+              <p>
+                Cygni, também chamado de “O Mundo Conhecido” (porque “O Mundo Parcialmente Cartografado e Frequentemente Hostil” não pegou), é formado por três continentes:
+              </p>
+              
+              <ul className="list-disc list-inside space-y-2 ml-4 text-cream">
+                <li><strong className="text-fiery">Caerbanog:</strong> onde fanáticos religiosos e impérios paranoicos disputam quem tem a verdade mais absoluta;</li>
+                <li><strong className="text-fiery">Veryum:</strong> lar de filósofos, acadêmicos e gente que leva muito a sério o ato de sussurrar em bibliotecas;</li>
+                <li><strong className="text-fiery">Citra:</strong> o arquipélago onde a democracia e a pirataria andam de mãos dadas, e às vezes trocam tapas.</li>
+              </ul>
+
+              <p className="pt-2">
+                O que é Cygni? Esse mundo não começou assim. Antes de tudo ser dividido, conquistado, quebrado e reconstruído com pedaços mágicos e má vontade, essa terra era habitada por tribos diversas — anões, goblins, Bachs, orcs, tritões, gente do deserto e outros que não cabem numa lista de introdução. Cada um vivia à sua maneira até que, como sempre, chegaram os humanos. E com os humanos veio a diplomacia, os acordos... e as guerras, muitas guerras.
+              </p>
+            </div>
+
+            <div className="mt-8 text-right border-t border-cream-muted/10 pt-4">
+              <p className="font-cinzel text-fiery font-bold text-lg">— Sullivan 'O Vento'</p>
+              <p className="text-sm text-cream-muted italic">Claro Mundo Conhecido (e suas incontáveis formas de te matar com burocracia, fogo ou sarcasmo)</p>
+            </div>
+          </div>
+        </div> 
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           {loreTopics.map((topic) => (

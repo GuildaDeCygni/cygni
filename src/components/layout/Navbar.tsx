@@ -44,7 +44,7 @@ export function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <img 
-              src="/Simbolo Guida de Cygni Sem fundo.png" 
+              src="/cygni/Ssf.png" 
               alt="Símbolo Cygni" 
               className="w-20 h-20 object-contain transition-transform duration-300 group-hover:scale-110 drop-shadow-[0_0_8px_rgba(246,113,1,0.5)]" />
             <div className="flex flex-col">

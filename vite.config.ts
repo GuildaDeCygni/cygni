@@ -1,7 +1,8 @@
-import react from "@vitejs/plugin-react"
-import { defineConfig } from "vite"
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
-  base: '/cygni/', // Isso deve ser igual ao nome do repositório no GitHub
-  plugins: [react()],
+  base: '/cygni/',
+  plugins: [react(), tsconfigPaths()],
 })

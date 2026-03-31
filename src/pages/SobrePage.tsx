@@ -8,9 +8,18 @@ const values = [
 ];
 
 const team = [
-  { name: 'Mestre Cygni', role: 'Fundador & Mestre de RPG', description: 'Criador do universo de Cygni e mestre há mais de uma década.' },
-  { name: 'Elara', role: 'Escritora & Lorekeeper', description: 'Responsável por dar vida às histórias do mundo.' },
-  { name: 'Thorin', role: 'Artesão & Designer', description: 'Mestre do corte a laser, transforma ideias em artefatos.' },
+  { name: 'Vylleon (Mestre)', role: 'Fundador & Criador de Cygni', description: 'Criador do universo de Cygni e mestre há mais de uma década.' },
+];
+
+const players = [
+  { playerName: 'Alfinete', characterName: 'Alex sandro', description: 'Um pequeno guinomo bardo astro do Xilofone.'},
+  { playerName: 'Magarian', characterName: 'Alcebiades', description: 'O monge bebado nivel um com mais de quinze paginas de historia.' },
+  { playerName: 'Aiprah', characterName: 'Thatari', description: 'Vinda dos sonhos mais loucos de alguém só não sabemos de quem'},
+  { playerName: 'Ybrook', characterName: 'Warryn', description: 'Um ladino metido a charlatão, que só serviu para vender poções falsas para o grupo' },
+  { playerName: 'LunaticoFtw', characterName: 'Ronir', description: 'O mesmo mago todas as vezes que ele joga e ainda não sabe quais são suas magias.' },
+  { playerName: 'Brunera', characterName: 'Quigreaf Drshez', description: 'Ao assassino ranger com tanta dificuldade de falar quanto de atirar.' },
+  { playerName: 'Iphod', characterName: 'Haseid', description: 'Foi capturado e fim da sessão.' },
+  { playerName: '_evaldo', characterName: 'Karim Reconta-Conto', description: 'O bardo que escutava tomates.' },
 ];
 
 export function SobrePage() {
@@ -29,9 +38,22 @@ export function SobrePage() {
               <Sword className="w-8 h-8 text-fiery" /><Scroll className="w-8 h-8 text-fiery/70" /><Flame className="w-8 h-8 text-fiery" />
             </div>
             <div className="space-y-6 scroll-card-text text-lg">
-              <p>A <span className="font-cinzel text-fiery font-semibold">Guilda de Cygni</span> nasceu de uma simples mesa de RPG entre amigos, quando alguém disse: <em className="text-charcoal/80">"E se criássemos nosso próprio mundo?"</em></p>
-              <p>O que começou como um cenário caseiro cresceu e evoluiu. Cygni tornou-se um mundo vivo, com histórias que se entrelaçam.</p>
-              <p>Hoje, a Guilda é mais do que um grupo de jogadores. Somos criadores de conteúdo, artesãos e uma comunidade apaixonada.</p>
+              <p><span className="font-cinzel text-fiery font-semibold">A Forja de um Universo: A História de Cygni</span></p>
+              <p>O universo de Cygni nasceu em meio ao silêncio e ao isolamento, durante o período da pandemia.
+                Inicialmente, o projeto era um exercício de criação de mundo movido por uma pergunta central: 
+                seria possível estruturar uma realidade inteira a partir de um único local? 
+                A centelha que acendeu essa história foi uma breve narrativa sobre a queda do então Rei — depois transformado em Imperador — Gregório III. 
+                Esse foi o marco zero para as nossas primeiras sessões de RPG, criadas com o propósito de explorar os contornos deste novo cenário.</p>
+              <p>No entanto, a magia da narrativa compartilhada tomou as rédeas.
+                 O que era apenas um estudo geográfico e político ganhou vida própria.
+                 A cada novo aventureiro criado nas mesas de jogo, o mundo de Cygni respirava, evoluía e se transformava.
+                 As fronteiras se expandiram muito além do plano original, moldadas pelas escolhas e pela imaginação daqueles que caminharam por suas terras.</p>
+              <p>Hoje, essa jornada transcende as fichas de personagens.
+                 A Guilda de Cygni se consolidou como um refúgio acolhedor para mentes criativas.
+                 Transformamo-nos em um espaço vivo, com transmissões ao vivo e conteúdos dedicados a compartilhar cada passo do desenvolvimento contínuo deste universo. 
+                 Além do nosso armazém focado em curadoria de itens de RPG, os horizontes de Cygni continuam a se expandir através da literatura, com o Guia de como não ser um idiota em Cygni atualmente em produção.</p>
+              <p>A Guilda é, acima de tudo, um convite de portas abertas.
+                 Um experimento contínuo para descobrir até onde a imaginação pode fluir, agregando sempre novas ideias, aventuras e pessoas a esta grande história que continuamos a escrever juntos.</p>
               <p className="text-center font-cinzel text-fiery font-semibold">Nossa missão é simples: criar, compartilhar e inspirar.</p>
             </div>
           </div>
@@ -52,9 +74,9 @@ export function SobrePage() {
 
         <div>
           <div className="text-center mb-10"><h3 className="font-cinzel text-xl font-bold text-cream">A Equipe</h3></div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {team.map((m) => (
-              <div key={m.name} className="text-center p-6 rounded-lg bg-charcoal/50 border border-cream-muted/10">
+              <div className="flex justify-center mb-16">
+              {team.map((m) => (
+                <div key={m.name} className="text-center p-6 rounded-lg bg-charcoal/50 border border-cream-muted/10 max-w-sm w-full">
                 <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-fiery to-fiery-dark flex items-center justify-center">
                   <span className="font-cinzel-decorative text-2xl font-bold text-cream">{m.name[0]}</span>
                 </div>
@@ -64,6 +86,21 @@ export function SobrePage() {
               </div>
             ))}
           </div>
+        <div className="mb-20">
+          <div className="text-center mb-10"><h3 className="font-cinzel text-xl font-bold text-cream">Aventureiros de Cygni</h3></div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            {players.map((p) => (
+              <div key={p.characterName} className="text-center p-6 rounded-lg bg-void/50 border border-fiery/20 hover:border-fiery/50 transition-colors">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full border border-fiery/30 flex items-center justify-center">
+                  <span className="font-cinzel-decorative text-xl font-bold text-fiery/70">{p.characterName[0]}</span>
+                </div>
+                <h4 className="font-cinzel text-lg font-semibold text-cream mb-1">{p.characterName}</h4>
+                <p className="text-xs text-cream-muted mb-3 italic">Jogado por: {p.playerName}</p>
+                <p className="text-sm text-cream-muted">{p.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
         </div>
 
         <div className="mt-20 text-center">

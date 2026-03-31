@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Layout } from '@/components/layout/Layout';
-import { HomePage } from '@/pages/HomePage';
-import { UniversoPage } from '@/pages/UniversoPage';
-import { BibliotecaPage } from '@/pages/BibliotecaPage';
-import { ForjaPage } from '@/pages/ForjaPage';
-import { ArmazemPage } from '@/pages/ArmazemPage';
-import { ConexoesPage } from '@/pages/ConexoesPage';
-import { SobrePage } from '@/pages/SobrePage';
-import { Toaster } from '@/components/ui/sonner';
+import { Layout } from './components/layout/Layout';
+import { HomePage } from './pages/HomePage';
+import { UniversoPage } from './pages/UniversoPage';
+import { BibliotecaPage } from './pages/BibliotecaPage';
+import { ForjaPage } from './pages/ForjaPage';
+import { ArmazemPage } from './pages/ArmazemPage';
+import { ConexoesPage } from './pages/ConexoesPage';
+import { SobrePage } from './pages/SobrePage';
+import { Toaster } from './components/ui/sonner';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/cygni/">''
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />

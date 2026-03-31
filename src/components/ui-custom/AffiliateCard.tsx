@@ -12,7 +12,7 @@ interface AffiliateCardProps {
 const platformColors = {
   amazon: { bg: 'bg-[#FF9900]/10', border: 'border-[#FF9900]/30 hover:border-[#FF9900]/60', text: 'text-[#FF9900]', label: 'Amazon' },
   magalu: { bg: 'bg-[#0086FF]/10', border: 'border-[#0086FF]/30 hover:border-[#0086FF]/60', text: 'text-[#0086FF]', label: 'Magalu' },
-  mercadolivre: { bg: 'bg-[#FFE600]/10', border: 'border-[#FFE600]/30 hover:border-[#FFE600]/60', text: 'text-[#FFE600]', label: 'Mercado Livre' },
+  mercadolivre: { bg: 'bg-[#FFF159]', border: 'border-[#FFF159]/50 hover:border-[#FFF159]', text: 'text-[#2D3277]', label: 'Mercado Livre' },
   shopee: { bg: 'bg-[#EE4D2D]/10', border: 'border-[#EE4D2D]/30 hover:border-[#EE4D2D]/60', text: 'text-[#EE4D2D]', label: 'Shopee' },
   other: { bg: 'bg-fiery/10', border: 'border-fiery/30 hover:border-fiery/60', text: 'text-fiery', label: 'Parceiro' },
 };
@@ -21,8 +21,7 @@ export function AffiliateCard({ name, description, platform, url, rating, catego
   const colors = platformColors[platform];
   return (
     <a href={url} target="_blank" rel="noopener noreferrer" className={`affiliate-card group ${colors.border}`}>
-      <div className="flex items-center justify-between mb-3">
-        <span className="badge-category text-charcoal border-charcoal">{category}</span>
+      <div className="flex items-center justify-end mb-3">
         <span className={`text-xs font-medium px-2 py-1 rounded ${colors.bg} ${colors.text}`}>{colors.label}</span>
       </div>
       <h3 className="font-cinzel text-base font-semibold text-charcoal group-hover:text-fiery transition-colors mb-2">{name}</h3>
