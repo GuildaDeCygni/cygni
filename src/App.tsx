@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components/layout/Layout';
 import { HomePage } from './pages/HomePage';
 import { UniversoPage } from './pages/UniversoPage';
@@ -11,7 +11,7 @@ import { Toaster } from './components/ui/sonner';
 
 function App() {
   return (
-    <BrowserRouter basename="/cygni/">''
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -24,7 +24,7 @@ function App() {
         </Route>
       </Routes>
       <Toaster position="bottom-right" toastOptions={{ style: { background: '#050505', border: '1px solid rgba(246, 113, 1, 0.3)', color: '#FDFCF7' } }} />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

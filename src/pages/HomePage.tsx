@@ -3,10 +3,10 @@ import { BookOpen, Hammer, Package, Scroll, Sparkles } from 'lucide-react';
 import { QuickLinkCard } from '@/components/ui-custom/QuickLinkCard';
 
 const quickLinks = [
-  { title: 'Universo Cygni', description: 'Explore o cenário de RPG, histórias e aventuras épicas.', icon: BookOpen, href: '/cygni/universo' },
-  { title: 'A Biblioteca', description: 'Descubra o livro "Guia de como não ser um idiota em Cygni".', icon: Scroll, href: '/cygni/biblioteca' },
-  { title: 'A Forja', description: 'Produtos físicos feitos com corte a laser.', icon: Hammer, href: '/cygni/forja' },
-  { title: 'O Armazém', description: 'Links de afiliados com produtos recomendados.', icon: Package, href: '/cygni/armazem' },
+  { title: 'Universo Cygni', description: 'Explore o cenário de RPG, histórias e aventuras épicas.', icon: BookOpen, href: '/universo' },
+  { title: 'A Biblioteca', description: 'Descubra o livro "Guia de como não ser um idiota em Cygni".', icon: Scroll, href: 'biblioteca' },
+  { title: 'A Forja', description: 'Produtos físicos feitos com corte a laser.', icon: Hammer, href: '/forja' },
+  { title: 'O Armazém', description: 'Links de afiliados com produtos recomendados.', icon: Package, href: '/armazem' },
 ];
 
 export function HomePage() {
