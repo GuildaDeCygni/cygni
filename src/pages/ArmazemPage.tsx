@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { SectionTitle } from '@/components/ui-custom/SectionTitle';
+import { Link } from 'react-router-dom';
 import { AffiliateCard } from '@/components/ui-custom/AffiliateCard';
 import { affiliateLinks, affiliateCategories } from '@/data/affiliates';
 import { Package, Info, Send } from 'lucide-react';
 
 export function ArmazemPage() {
-  const [activeCategory, setActiveCategory] = useState('Todos');
+  const [activeCategory, setActiveCategory] = useState('RPG');
   const filteredLinks = activeCategory === 'Todos' ? affiliateLinks : affiliateLinks.filter(l => l.category === activeCategory);
   const totalProdutos = affiliateLinks.length; 
   const totalParceiros = new Set(affiliateLinks.map(l => l.platform)).size;
@@ -73,10 +74,10 @@ export function ArmazemPage() {
             
             {/* O botão agora mora junto com o texto */}
             <div className="flex justify-center">
-              <a href="/conexoes" className="btn-fiery inline-flex items-center gap-2">
+              <Link to="/conexoes" className="btn-fiery inline-flex items-center gap-2">
                 <Send className="w-5 h-5" />
                 Falar com a Guilda
-              </a>
+              </Link>
             </div>
           </div>
         </div>

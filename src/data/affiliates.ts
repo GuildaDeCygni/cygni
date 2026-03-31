@@ -9,7 +9,7 @@ export interface AffiliateLink {
   category: string;
 }
 
-export const affiliateCategories = ['Todos',  'RPG', 'Livros', 'Tecnologia', 'Mesa de Jogo', 'Arte', 'Equipamentos', 'Esportes', 'Outros'];
+export const affiliateCategories = ['RPG', 'Livros', 'Tecnologia', 'Mesa de Jogo', 'Arte', 'Equipamentos', 'Esportes', 'Todos'];
 
 export const affiliateLinks: AffiliateLink[] = [
   { id: '1', name: 'Kit de Dados Rpg', description: 'Conjunto de dados de rpg com 7 peças translucidos (D4, D6, D8, D10, D10%, D12, D20)', platform: 'mercadolivre', url: 'https://meli.la/2UBp5iw', rating: 4.8, category: 'RPG' },
