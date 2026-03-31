@@ -4,7 +4,7 @@ import { QuickLinkCard } from '@/components/ui-custom/QuickLinkCard';
 
 const quickLinks = [
   { title: 'Universo Cygni', description: 'Explore o cenário de RPG, histórias e aventuras épicas.', icon: BookOpen, href: '/universo' },
-  { title: 'A Biblioteca', description: 'Descubra o livro "Guia de como não ser um idiota em Cygni".', icon: Scroll, href: 'biblioteca' },
+  { title: 'A Biblioteca', description: 'Descubra o livro "Guia de como não ser um idiota em Cygni".', icon: Scroll, href: '/biblioteca' },
   { title: 'A Forja', description: 'Produtos físicos feitos com corte a laser.', icon: Hammer, href: '/forja' },
   { title: 'O Armazém', description: 'Links de afiliados com produtos recomendados.', icon: Package, href: '/armazem' },
 ];
@@ -64,8 +64,8 @@ export function HomePage() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/cygni/universo" className="btn-fiery">Explorar o Universo</Link>
-            <Link to="/cygni/conexoes" className="btn-cream">Juntar-se à Guilda</Link>
+            <Link to="/universo" className="btn-fiery">Explorar o Universo</Link>
+            <Link to="/conexoes" className="btn-cream">Juntar-se à Guilda</Link>
           </div>
         </div>
       </section>
